@@ -1559,6 +1559,387 @@ body.page-prompt-golf-arcade::before {
   color: rgba(221, 247, 255, 0.64);
 }
 
+body.page-prompt-golf-classroom::before {
+  opacity: 0.64;
+  background:
+    linear-gradient(120deg, rgba(11, 15, 28, 0.18), rgba(11, 15, 28, 0.72)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(116, 232, 255, 0.05) 0,
+      rgba(116, 232, 255, 0.05) 1px,
+      transparent 1px,
+      transparent 80px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(116, 232, 255, 0.025) 0,
+      rgba(116, 232, 255, 0.025) 1px,
+      transparent 1px,
+      transparent 80px
+    );
+}
+
+.classroom-page,
+.broadcast-page {
+  padding-top: 36px;
+}
+
+.classroom-hero,
+.broadcast-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(280px, 0.94fr);
+  gap: 18px;
+  align-items: stretch;
+  padding-bottom: 28px;
+}
+
+.team-hero .timer-display {
+  min-height: 100%;
+}
+
+.classroom-note-panel,
+.broadcast-chip,
+.classroom-control-panel,
+.classroom-team-panel,
+.classroom-broadcast-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 60%),
+    rgba(10, 14, 28, 0.78);
+}
+
+.classroom-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.34fr) minmax(0, 0.66fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.classroom-stage,
+.classroom-sidebar {
+  display: grid;
+  gap: 18px;
+}
+
+.teacher-form {
+  display: grid;
+  gap: 12px;
+}
+
+.teacher-form-split,
+.member-grid,
+.classroom-lower-grid,
+.role-grid,
+.broadcast-card-metrics {
+  display: grid;
+  gap: 12px;
+}
+
+.teacher-form-split {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.classroom-select {
+  padding-right: 42px;
+  text-transform: uppercase;
+}
+
+.classroom-button {
+  margin-top: 8px;
+}
+
+.classroom-control-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: end;
+}
+
+.timer-display {
+  min-width: 180px;
+  padding: 18px 20px;
+  border-radius: 24px;
+  border: 1px solid rgba(116, 232, 255, 0.14);
+  background: rgba(8, 12, 24, 0.58);
+  text-align: center;
+}
+
+.timer-display strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  line-height: 0.94;
+  color: var(--mode-warm);
+}
+
+.timer-display span,
+.team-card-subtitle,
+.mini-copy,
+.broadcast-status {
+  display: block;
+  margin-top: 8px;
+  color: rgba(221, 247, 255, 0.66);
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.timer-display-large {
+  display: grid;
+  align-content: center;
+}
+
+.classroom-brief-grid {
+  margin-top: 18px;
+}
+
+.mini-copy {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.teacher-action-row,
+.team-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.classroom-lower-grid {
+  grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.96fr);
+}
+
+.member-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.team-roster {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.team-card,
+.role-card {
+  padding: 16px 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(116, 232, 255, 0.14);
+  background: rgba(8, 12, 24, 0.48);
+}
+
+.team-card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.team-card-head strong,
+.role-card strong,
+.broadcast-card h2 {
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.team-remove {
+  min-height: 34px;
+  padding-inline: 12px;
+}
+
+.role-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.role-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--mode-primary);
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.classroom-preview-list {
+  margin-top: 18px;
+}
+
+.classroom-empty-panel {
+  min-height: 320px;
+}
+
+.broadcast-page {
+  width: min(1380px, calc(100% - 40px));
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+
+.broadcast-title .lead {
+  max-width: none;
+}
+
+.broadcast-meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.broadcast-chip {
+  text-align: center;
+}
+
+.broadcast-chip strong,
+.broadcast-rank {
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.broadcast-chip strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: var(--mode-warm);
+}
+
+.broadcast-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.broadcast-card {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.broadcast-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -12% -22% 26%;
+  height: 44%;
+  background:
+    linear-gradient(to top, rgba(11, 15, 28, 0.9), transparent 48%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(116, 232, 255, 0.18) 0,
+      rgba(116, 232, 255, 0.18) 1px,
+      transparent 1px,
+      transparent 62px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(116, 232, 255, 0.14) 0,
+      rgba(116, 232, 255, 0.14) 1px,
+      transparent 1px,
+      transparent 62px
+    );
+  transform: perspective(760px) rotateX(78deg);
+  opacity: 0.58;
+  pointer-events: none;
+}
+
+.broadcast-card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.broadcast-rank {
+  color: var(--mode-warm);
+  font-size: 1.1rem;
+}
+
+.broadcast-status {
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(116, 232, 255, 0.14);
+  background: rgba(8, 12, 24, 0.6);
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0;
+}
+
+.status-ready,
+.status-locked {
+  color: var(--yellow);
+  border-color: rgba(255, 170, 0, 0.3);
+}
+
+.status-live {
+  color: var(--mode-primary);
+}
+
+.status-timeout {
+  color: rgba(255, 120, 120, 0.9);
+  border-color: rgba(255, 120, 120, 0.24);
+}
+
+.broadcast-card-metrics {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.broadcast-card-metrics div {
+  padding: 14px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(116, 232, 255, 0.12);
+  background: rgba(8, 12, 24, 0.48);
+}
+
+.broadcast-card-metrics strong {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--font-display);
+  font-size: 1.24rem;
+  color: var(--mode-warm);
+}
+
+.broadcast-progress {
+  margin-top: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.broadcast-progress span {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.broadcast-progress div {
+  height: 12px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(116, 232, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.broadcast-progress i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--mode-primary), var(--mode-warm));
+}
+
+.broadcast-lower {
+  margin-top: 18px;
+}
+
 .site-footer {
   width: min(1220px, calc(100% - 40px));
   margin: 0 auto;
@@ -1593,7 +1974,13 @@ body.page-prompt-golf-arcade::before {
   .arcade-shell,
   .run-grid,
   .briefing-grid,
-  .selector-grid-compact {
+  .selector-grid-compact,
+  .classroom-hero,
+  .broadcast-hero,
+  .classroom-grid,
+  .classroom-lower-grid,
+  .broadcast-grid,
+  .broadcast-meta {
     grid-template-columns: 1fr;
   }
 
@@ -1602,7 +1989,10 @@ body.page-prompt-golf-arcade::before {
   .loop-grid,
   .concept-grid,
   .arena-grid-large,
-  .hole-grid-select {
+  .hole-grid-select,
+  .teacher-form-split,
+  .member-grid,
+  .broadcast-card-metrics {
     grid-template-columns: 1fr;
   }
 
@@ -1631,8 +2021,14 @@ body.page-prompt-golf-arcade::before {
     align-items: stretch;
   }
 
-  .round-actions {
+  .round-actions,
+  .teacher-action-row {
     justify-content: start;
+  }
+
+  .classroom-control-topline {
+    flex-direction: column;
+    align-items: start;
   }
 }
 
@@ -1695,7 +2091,8 @@ body.page-prompt-golf-arcade::before {
   }
 
   .attract-grid,
-  .leaderboard-row {
+  .leaderboard-row,
+  .role-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1714,5 +2111,9 @@ body.page-prompt-golf-arcade::before {
 
   .message-feed {
     max-height: 540px;
+  }
+
+  .broadcast-page {
+    width: min(100% - 24px, 1380px);
   }
 }

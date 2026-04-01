@@ -54,6 +54,7 @@ export default function PromptGolfLanding() {
           { label: "Mecanica", to: "/#mechanics" },
           { label: "Comunidad", to: "/#community" },
           { label: "Jugar", to: "/play" },
+          { label: "Aula", to: "/classroom" },
           { label: "Clase", to: "/fundamentos-ia" },
         ]}
       />
@@ -72,6 +73,9 @@ export default function PromptGolfLanding() {
             <div className="hero-actions">
               <Link className="primary-button" to="/play">
                 Entrar al MVP
+              </Link>
+              <Link className="secondary-button" to="/classroom">
+                Modo aula
               </Link>
               <a className="secondary-button" href="#tracks">
                 Explorar canchas
@@ -239,6 +243,9 @@ export default function PromptGolfLanding() {
             <div className="hero-actions">
               <Link className="primary-button" to="/play">
                 Jugar ahora
+              </Link>
+              <Link className="secondary-button" to="/classroom">
+                Activar aula
               </Link>
               <Link className="secondary-button" to="/fundamentos-ia">
                 Entrar a la clase

@@ -244,6 +244,7 @@ export default function PromptGolfArcade() {
           { label: "Setup", to: "/play#setup" },
           { label: "Cabina", to: "/play#run" },
           { label: "Ranking", to: "/play#ranking" },
+          { label: "Aula", to: "/classroom" },
           { label: "Clase", to: "/fundamentos-ia" },
         ]}
       />
