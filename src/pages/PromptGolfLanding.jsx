@@ -47,12 +47,13 @@ export default function PromptGolfLanding() {
       <SiteHeader
         brand="PROMPT GOLF"
         brandTo="/"
-        ctaLabel="Ir a la clase"
-        ctaTo="/fundamentos-ia"
+        ctaLabel="Jugar MVP"
+        ctaTo="/play"
         links={[
           { label: "Canchas", to: "/#tracks" },
           { label: "Mecanica", to: "/#mechanics" },
           { label: "Comunidad", to: "/#community" },
+          { label: "Jugar", to: "/play" },
           { label: "Clase", to: "/fundamentos-ia" },
         ]}
       />
@@ -69,9 +70,9 @@ export default function PromptGolfLanding() {
             </p>
 
             <div className="hero-actions">
-              <a className="primary-button" href="#mechanics">
-                Leer la regla
-              </a>
+              <Link className="primary-button" to="/play">
+                Entrar al MVP
+              </Link>
               <a className="secondary-button" href="#tracks">
                 Explorar canchas
               </a>
@@ -236,7 +237,10 @@ export default function PromptGolfLanding() {
             </p>
 
             <div className="hero-actions">
-              <Link className="primary-button" to="/fundamentos-ia">
+              <Link className="primary-button" to="/play">
+                Jugar ahora
+              </Link>
+              <Link className="secondary-button" to="/fundamentos-ia">
                 Entrar a la clase
               </Link>
             </div>

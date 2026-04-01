@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import PromptGolfLanding from "./pages/PromptGolfLanding";
+import PromptGolfArcade from "./pages/PromptGolfArcade";
 import AcademyLanding from "./pages/AcademyLanding";
 import AcademyResources from "./pages/AcademyResources";
 
@@ -9,7 +10,7 @@ export default function App() {
 
   useEffect(() => {
     if (!location.hash) {
-      window.scrollTo({ top: 0, behavior: "instant" });
+      window.scrollTo({ top: 0, behavior: "auto" });
       return;
     }
 
@@ -26,6 +27,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<PromptGolfLanding />} />
+      <Route path="/play" element={<PromptGolfArcade />} />
       <Route path="/fundamentos-ia" element={<AcademyLanding />} />
       <Route path="/fundamentos-ia/recursos" element={<AcademyResources />} />
       <Route path="*" element={<Navigate to="/" replace />} />
