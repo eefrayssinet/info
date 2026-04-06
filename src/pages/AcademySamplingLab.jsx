@@ -3,6 +3,7 @@ import ConceptVectorLab from "../components/ConceptVectorLab";
 import DiffusionLab from "../components/DiffusionLab";
 import SiteHeader from "../components/SiteHeader";
 import TokenSamplingLab from "../components/TokenSamplingLab";
+import VectorSpaceLab from "../components/VectorSpaceLab";
 import { useBodyMode } from "../hooks/useBodyMode";
 import { useRevealObserver } from "../hooks/useRevealObserver";
 
@@ -30,18 +31,23 @@ export default function AcademySamplingLab() {
         <section className="section">
           <div className="section-heading" data-reveal>
             <p className="eyebrow">Laboratorio interactivo</p>
-            <h2>Sampling, parametros, diffusion y modelos generativos</h2>
+            <h2>Sampling, espacios vectoriales, parametros y diffusion</h2>
             <p className="section-copy">
-              Esta pestana ahora junta tres demos locales: una para ver como cambia la
-              distribucion de tokens en texto, otra para explicar como crece la precision
-              semantica con mas parametros y una tercera para visualizar como un modelo
-              de difusion limpia ruido y sigue un prompt de imagen paso a paso.
+              Esta pestana ahora junta cuatro demos locales: una para ver como cambia la
+              distribucion de tokens en texto, otra para entender por que la alta
+              dimensionalidad vuelve casi ortogonales a los conceptos, una tercera para
+              explicar como crece la precision semantica con mas parametros y una ultima
+              para visualizar como un modelo de difusion limpia ruido y sigue un prompt
+              de imagen paso a paso.
             </p>
           </div>
 
           <div className="lab-visualizer-stack">
             <div data-reveal>
               <TokenSamplingLab />
+            </div>
+            <div data-reveal>
+              <VectorSpaceLab />
             </div>
             <div data-reveal>
               <ConceptVectorLab />
@@ -53,7 +59,7 @@ export default function AcademySamplingLab() {
         </section>
       </main>
 
-      <Footer>FUNDAMENTOS BASICOS DE IA // sampling + vector + diffusion lab</Footer>
+      <Footer>FUNDAMENTOS BASICOS DE IA // sampling + space + vector + diffusion lab</Footer>
     </>
   );
 }

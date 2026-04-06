@@ -1,0 +1,284 @@
+/* VectorSpaceLab.css */
+/* Self-contained styles with a dedicated .vsl- prefix. */
+
+.vsl-root {
+  --vsl-accent: #534ab7;
+  --vsl-accent-light: #eeedfe;
+  --vsl-accent-mid: #afa9ec;
+  --vsl-text: #15172b;
+  --vsl-text-secondary: #48506b;
+  --vsl-text-hint: #66708d;
+  --vsl-bg: #ffffff;
+  --vsl-bg-muted: #f4f5fb;
+  --vsl-border: rgba(48, 56, 90, 0.16);
+  --vsl-shadow: 0 24px 56px rgba(5, 10, 28, 0.28);
+  --vsl-radius: 16px;
+
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 250, 255, 0.98));
+  border: 1px solid rgba(83, 74, 183, 0.18);
+  border-radius: 28px;
+  box-shadow: var(--vsl-shadow);
+  color: var(--vsl-text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .vsl-root {
+    --vsl-accent: #afa9ec;
+    --vsl-accent-light: #2f2a5f;
+    --vsl-accent-mid: #938be8;
+    --vsl-text: #f5f7ff;
+    --vsl-text-secondary: #ccd1ea;
+    --vsl-text-hint: #aab1d2;
+    --vsl-bg: #111426;
+    --vsl-bg-muted: #181d33;
+    --vsl-border: rgba(255, 255, 255, 0.14);
+    --vsl-shadow: 0 28px 64px rgba(0, 0, 0, 0.42);
+    background:
+      linear-gradient(180deg, rgba(17, 20, 38, 0.96), rgba(24, 29, 51, 0.98));
+    border-color: rgba(175, 169, 236, 0.24);
+  }
+}
+
+.vsl-header {
+  margin-bottom: 2rem;
+}
+
+.vsl-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--vsl-text);
+}
+
+.vsl-subtitle {
+  font-size: 0.9rem;
+  color: var(--vsl-text-secondary);
+  margin: 0;
+  max-width: 66ch;
+  line-height: 1.55;
+}
+
+.vsl-section {
+  margin-bottom: 1.25rem;
+}
+
+.vsl-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vsl-slider-label {
+  font-size: 0.85rem;
+  color: var(--vsl-text-secondary);
+  min-width: 100px;
+}
+
+.vsl-slider {
+  flex: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 8px;
+  border-radius: 999px;
+  border: 1px solid var(--vsl-border);
+  background: linear-gradient(90deg, rgba(83, 74, 183, 0.22), rgba(83, 74, 183, 0.08));
+  outline: none;
+}
+
+.vsl-slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.vsl-slider::-moz-range-track {
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+}
+
+.vsl-slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--vsl-accent);
+  cursor: pointer;
+  border: 2px solid var(--vsl-bg);
+  box-shadow: 0 0 0 2px var(--vsl-accent), 0 4px 12px rgba(0, 0, 0, 0.18);
+  margin-top: -6px;
+}
+
+.vsl-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--vsl-accent);
+  cursor: pointer;
+  border: 2px solid var(--vsl-bg);
+  box-shadow: 0 0 0 2px var(--vsl-accent), 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.vsl-slider-value {
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 48px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--vsl-text);
+}
+
+.vsl-presets {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 1.75rem;
+}
+
+.vsl-preset-btn {
+  padding: 0.5rem 0.6rem;
+  font-size: 0.82rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: 1px solid var(--vsl-border);
+  border-radius: var(--vsl-radius);
+  background: var(--vsl-bg);
+  color: var(--vsl-text);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.vsl-preset-btn:hover {
+  background: var(--vsl-bg-muted);
+}
+
+.vsl-preset-btn:active {
+  transform: scale(0.97);
+}
+
+.vsl-preset-btn--active {
+  border-color: var(--vsl-accent);
+  border-width: 2px;
+  background: var(--vsl-accent-light);
+}
+
+.vsl-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 1.75rem;
+}
+
+.vsl-metric-card {
+  background: var(--vsl-bg-muted);
+  border: 1px solid var(--vsl-border);
+  border-radius: var(--vsl-radius);
+  padding: 0.85rem 1rem;
+}
+
+.vsl-metric-label {
+  font-size: 0.78rem;
+  color: var(--vsl-text-hint);
+  margin-bottom: 2px;
+}
+
+.vsl-metric-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.vsl-metric-sub {
+  font-size: 0.7rem;
+  color: var(--vsl-text-hint);
+}
+
+.vsl-chart-container {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 1.75rem;
+  padding: 0.9rem 0.9rem 0.4rem;
+  background: var(--vsl-bg-muted);
+  border: 1px solid var(--vsl-border);
+  border-radius: 22px;
+}
+
+.vsl-chart-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.vsl-capacity-card {
+  padding: 1rem 1.25rem;
+  background: var(--vsl-bg-muted);
+  border: 1px solid var(--vsl-border);
+  border-radius: var(--vsl-radius);
+  margin-bottom: 1.75rem;
+}
+
+.vsl-capacity-label {
+  font-size: 0.78rem;
+  color: var(--vsl-text-hint);
+  margin-bottom: 4px;
+}
+
+.vsl-capacity-text {
+  font-size: 0.9rem;
+  color: var(--vsl-text);
+  line-height: 1.5;
+}
+
+.vsl-note {
+  padding: 1rem 1.25rem;
+  background: var(--vsl-bg-muted);
+  border: 1px solid var(--vsl-border);
+  border-radius: var(--vsl-radius);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--vsl-text-secondary);
+  border-left: 3px solid var(--vsl-accent-mid);
+}
+
+.vsl-note strong {
+  color: var(--vsl-text);
+}
+
+.vsl-note code {
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 0.78rem;
+  background: rgba(83, 74, 183, 0.14);
+  color: var(--vsl-text);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .vsl-root {
+    padding: 1.25rem 1rem;
+  }
+
+  .vsl-presets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vsl-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .vsl-slider-label {
+    min-width: 80px;
+  }
+
+  .vsl-chart-container {
+    height: 220px;
+  }
+}
