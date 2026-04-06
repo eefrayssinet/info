@@ -1,0 +1,346 @@
+/* TokenSamplingLab.css */
+/* Self-contained styles with a dedicated .tsl- prefix. */
+
+.tsl-root {
+  --tsl-accent: #534ab7;
+  --tsl-accent-light: #eeedfe;
+  --tsl-accent-mid: #afa9ec;
+  --tsl-text: #1a1a1a;
+  --tsl-text-secondary: #6b6b6b;
+  --tsl-text-hint: #999;
+  --tsl-bg: #ffffff;
+  --tsl-bg-muted: #f6f5f2;
+  --tsl-border: rgba(0, 0, 0, 0.1);
+  --tsl-radius: 10px;
+
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  color: var(--tsl-text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tsl-root {
+    --tsl-accent: #afa9ec;
+    --tsl-accent-light: #2a2554;
+    --tsl-accent-mid: #7f77dd;
+    --tsl-text: #e8e8e8;
+    --tsl-text-secondary: #a0a0a0;
+    --tsl-text-hint: #777;
+    --tsl-bg: #1a1a1a;
+    --tsl-bg-muted: #252525;
+    --tsl-border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.tsl-header {
+  margin-bottom: 2rem;
+}
+
+.tsl-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--tsl-text);
+}
+
+.tsl-subtitle {
+  font-size: 0.9rem;
+  color: var(--tsl-text-secondary);
+  margin: 0;
+}
+
+.tsl-section {
+  margin-bottom: 1.75rem;
+}
+
+.tsl-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--tsl-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.tsl-hint {
+  font-size: 0.8rem;
+  color: var(--tsl-text-hint);
+  margin: 0.5rem 0 0;
+  line-height: 1.5;
+}
+
+.tsl-hint em {
+  background: var(--tsl-accent-light);
+  color: var(--tsl-accent);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-style: normal;
+  font-size: 0.78rem;
+}
+
+.tsl-prompt-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border: 1px solid var(--tsl-border);
+  border-radius: var(--tsl-radius);
+  background: var(--tsl-bg);
+  color: var(--tsl-text);
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.tsl-prompt-input:focus {
+  border-color: var(--tsl-accent);
+}
+
+.tsl-context-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.5rem;
+}
+
+.tsl-context-label {
+  font-size: 0.78rem;
+  color: var(--tsl-text-hint);
+}
+
+.tsl-context-badge {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 2px 10px;
+  border-radius: 20px;
+  background: var(--tsl-accent-light);
+  color: var(--tsl-accent);
+}
+
+.tsl-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.6rem;
+}
+
+.tsl-slider-label {
+  font-size: 0.85rem;
+  color: var(--tsl-text-secondary);
+  min-width: 110px;
+}
+
+.tsl-slider {
+  flex: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--tsl-border);
+  outline: none;
+}
+
+.tsl-slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--tsl-accent);
+  cursor: pointer;
+  border: 2px solid var(--tsl-bg);
+  box-shadow: 0 0 0 1px var(--tsl-accent);
+}
+
+.tsl-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--tsl-accent);
+  cursor: pointer;
+  border: 2px solid var(--tsl-bg);
+  box-shadow: 0 0 0 1px var(--tsl-accent);
+}
+
+.tsl-slider-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  min-width: 40px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.tsl-presets {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 1.75rem;
+}
+
+.tsl-preset-btn {
+  padding: 0.45rem 0.5rem;
+  font-size: 0.8rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: 1px solid var(--tsl-border);
+  border-radius: var(--tsl-radius);
+  background: var(--tsl-bg);
+  color: var(--tsl-text);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.tsl-preset-btn:hover {
+  background: var(--tsl-accent-light);
+  border-color: var(--tsl-accent-mid);
+}
+
+.tsl-preset-btn:active {
+  transform: scale(0.97);
+}
+
+.tsl-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 1.75rem;
+}
+
+.tsl-metric-card {
+  background: var(--tsl-bg-muted);
+  border-radius: var(--tsl-radius);
+  padding: 0.85rem 1rem;
+}
+
+.tsl-metric-label {
+  font-size: 0.78rem;
+  color: var(--tsl-text-hint);
+  margin-bottom: 2px;
+}
+
+.tsl-metric-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.tsl-metric-sub {
+  font-size: 0.7rem;
+  color: var(--tsl-text-hint);
+}
+
+.tsl-chart-container {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 1.75rem;
+}
+
+.tsl-chart-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.tsl-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 0.5rem;
+}
+
+.tsl-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 14px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.tsl-freq-list {
+  margin-top: 0.5rem;
+}
+
+.tsl-freq-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.tsl-freq-word {
+  font-size: 0.82rem;
+  min-width: 85px;
+  text-align: right;
+  color: var(--tsl-text-secondary);
+}
+
+.tsl-freq-bar-bg {
+  flex: 1;
+  height: 14px;
+  border-radius: 3px;
+  background: var(--tsl-bg-muted);
+  overflow: hidden;
+}
+
+.tsl-freq-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--tsl-accent);
+  opacity: 0.65;
+  transition: width 0.3s ease;
+}
+
+.tsl-freq-count {
+  font-size: 0.75rem;
+  color: var(--tsl-text-hint);
+  min-width: 90px;
+  font-variant-numeric: tabular-nums;
+}
+
+.tsl-note {
+  margin-top: 2rem;
+  padding: 1rem 1.25rem;
+  background: var(--tsl-bg-muted);
+  border-radius: var(--tsl-radius);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--tsl-text-secondary);
+  border-left: 3px solid var(--tsl-accent-mid);
+}
+
+.tsl-note strong {
+  color: var(--tsl-text);
+}
+
+.tsl-note code {
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 0.78rem;
+  background: var(--tsl-border);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .tsl-root {
+    padding: 1.25rem 1rem;
+  }
+
+  .tsl-presets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tsl-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .tsl-slider-label {
+    min-width: 80px;
+  }
+
+  .tsl-freq-word {
+    min-width: 65px;
+  }
+}

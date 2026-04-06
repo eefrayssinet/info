@@ -68,7 +68,8 @@ export default function AcademyLanding() {
         links={[
           { label: "Mapa", to: "/fundamentos-ia#overview" },
           { label: "Presentacion", to: "/fundamentos-ia#deck" },
-          { label: "Recursos", to: "/fundamentos-ia#resources-preview" },
+          { label: "Recursos", to: "/fundamentos-ia/recursos" },
+          { label: "Lab", to: "/fundamentos-ia/lab-sampling" },
           { label: "Juego", to: "/" },
         ]}
       />

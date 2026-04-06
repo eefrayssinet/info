@@ -7,6 +7,7 @@ import PromptGolfClassroomTeam from "./pages/PromptGolfClassroomTeam";
 import PromptGolfClassroomBroadcast from "./pages/PromptGolfClassroomBroadcast";
 import AcademyLanding from "./pages/AcademyLanding";
 import AcademyResources from "./pages/AcademyResources";
+import AcademySamplingLab from "./pages/AcademySamplingLab";
 
 export default function App() {
   const location = useLocation();
@@ -36,6 +37,7 @@ export default function App() {
       <Route path="/classroom/broadcast" element={<PromptGolfClassroomBroadcast />} />
       <Route path="/fundamentos-ia" element={<AcademyLanding />} />
       <Route path="/fundamentos-ia/recursos" element={<AcademyResources />} />
+      <Route path="/fundamentos-ia/lab-sampling" element={<AcademySamplingLab />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

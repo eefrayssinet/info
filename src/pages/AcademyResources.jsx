@@ -19,6 +19,7 @@ export default function AcademyResources() {
           { label: "Biblioteca", to: "/fundamentos-ia/recursos#library" },
           { label: "Streams", to: "/fundamentos-ia/recursos#streams" },
           { label: "Presentacion", to: "/fundamentos-ia" },
+          { label: "Lab", to: "/fundamentos-ia/lab-sampling" },
           { label: "Juego", to: "/" },
         ]}
       />
