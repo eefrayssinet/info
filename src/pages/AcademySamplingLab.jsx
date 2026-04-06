@@ -1,4 +1,5 @@
 import Footer from "../components/Footer";
+import ConceptVectorLab from "../components/ConceptVectorLab";
 import DiffusionLab from "../components/DiffusionLab";
 import SiteHeader from "../components/SiteHeader";
 import TokenSamplingLab from "../components/TokenSamplingLab";
@@ -29,11 +30,12 @@ export default function AcademySamplingLab() {
         <section className="section">
           <div className="section-heading" data-reveal>
             <p className="eyebrow">Laboratorio interactivo</p>
-            <h2>Sampling, diffusion y modelos generativos</h2>
+            <h2>Sampling, parametros, diffusion y modelos generativos</h2>
             <p className="section-copy">
-              Esta pestana ahora junta dos demos locales: una para ver como cambia la
-              distribucion de tokens en texto y otra para visualizar como un modelo de
-              difusion va limpiando ruido y siguiendo el prompt de imagen paso a paso.
+              Esta pestana ahora junta tres demos locales: una para ver como cambia la
+              distribucion de tokens en texto, otra para explicar como crece la precision
+              semantica con mas parametros y una tercera para visualizar como un modelo
+              de difusion limpia ruido y sigue un prompt de imagen paso a paso.
             </p>
           </div>
 
@@ -42,13 +44,16 @@ export default function AcademySamplingLab() {
               <TokenSamplingLab />
             </div>
             <div data-reveal>
+              <ConceptVectorLab />
+            </div>
+            <div data-reveal>
               <DiffusionLab />
             </div>
           </div>
         </section>
       </main>
 
-      <Footer>FUNDAMENTOS BASICOS DE IA // sampling + diffusion lab</Footer>
+      <Footer>FUNDAMENTOS BASICOS DE IA // sampling + vector + diffusion lab</Footer>
     </>
   );
 }
