@@ -1,4 +1,5 @@
 import Footer from "../components/Footer";
+import DiffusionLab from "../components/DiffusionLab";
 import SiteHeader from "../components/SiteHeader";
 import TokenSamplingLab from "../components/TokenSamplingLab";
 import { useBodyMode } from "../hooks/useBodyMode";
@@ -28,21 +29,26 @@ export default function AcademySamplingLab() {
         <section className="section">
           <div className="section-heading" data-reveal>
             <p className="eyebrow">Laboratorio interactivo</p>
-            <h2>Sampling, contexto y distribuciones</h2>
+            <h2>Sampling, diffusion y modelos generativos</h2>
             <p className="section-copy">
-              Esta pestana suma una demo interactiva para mostrar como cambian las
-              probabilidades de salida cuando alteras el prompt, la temperatura y el filtro
-              top-p.
+              Esta pestana ahora junta dos demos locales: una para ver como cambia la
+              distribucion de tokens en texto y otra para visualizar como un modelo de
+              difusion va limpiando ruido y siguiendo el prompt de imagen paso a paso.
             </p>
           </div>
 
-          <div data-reveal>
-            <TokenSamplingLab />
+          <div className="lab-visualizer-stack">
+            <div data-reveal>
+              <TokenSamplingLab />
+            </div>
+            <div data-reveal>
+              <DiffusionLab />
+            </div>
           </div>
         </section>
       </main>
 
-      <Footer>FUNDAMENTOS BASICOS DE IA // sampling lab</Footer>
+      <Footer>FUNDAMENTOS BASICOS DE IA // sampling + diffusion lab</Footer>
     </>
   );
 }

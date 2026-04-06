@@ -559,6 +559,11 @@ h2 {
   padding: 48px 0;
 }
 
+.lab-visualizer-stack {
+  display: grid;
+  gap: 32px;
+}
+
 .section-heading {
   max-width: 780px;
   margin-bottom: 28px;
