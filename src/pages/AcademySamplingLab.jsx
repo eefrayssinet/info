@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import ConceptVectorLab from "../components/ConceptVectorLab";
+import ContextLab from "../components/ContextLab";
 import DiffusionLab from "../components/DiffusionLab";
 import SiteHeader from "../components/SiteHeader";
 import TokenSamplingLab from "../components/TokenSamplingLab";
@@ -31,14 +32,15 @@ export default function AcademySamplingLab() {
         <section className="section">
           <div className="section-heading" data-reveal>
             <p className="eyebrow">Laboratorio interactivo</p>
-            <h2>Sampling, espacios vectoriales, parametros y diffusion</h2>
+            <h2>Sampling, espacios vectoriales, contexto y diffusion</h2>
             <p className="section-copy">
-              Esta pestana ahora junta cuatro demos locales: una para ver como cambia la
+              Esta pestana ahora junta cinco demos locales: una para ver como cambia la
               distribucion de tokens en texto, otra para entender por que la alta
               dimensionalidad vuelve casi ortogonales a los conceptos, una tercera para
-              explicar como crece la precision semantica con mas parametros y una ultima
-              para visualizar como un modelo de difusion limpia ruido y sigue un prompt
-              de imagen paso a paso.
+              explicar como crece la precision semantica con mas parametros, una cuarta
+              para mostrar como el contexto redirige la respuesta y una ultima para
+              visualizar como un modelo de difusion limpia ruido y sigue un prompt de
+              imagen paso a paso.
             </p>
           </div>
 
@@ -53,13 +55,16 @@ export default function AcademySamplingLab() {
               <ConceptVectorLab />
             </div>
             <div data-reveal>
+              <ContextLab />
+            </div>
+            <div data-reveal>
               <DiffusionLab />
             </div>
           </div>
         </section>
       </main>
 
-      <Footer>FUNDAMENTOS BASICOS DE IA // sampling + space + vector + diffusion lab</Footer>
+      <Footer>FUNDAMENTOS BASICOS DE IA // sampling + space + vector + context + diffusion lab</Footer>
     </>
   );
 }

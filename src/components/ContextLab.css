@@ -1,0 +1,277 @@
+/* ContextLab.css */
+/* Self-contained styles with a dedicated .cxl- prefix. */
+
+.cxl-root {
+  --cxl-accent: #534ab7;
+  --cxl-accent-light: #eeedfe;
+  --cxl-accent-mid: #afa9ec;
+  --cxl-system-bg: #eeedfe;
+  --cxl-system-fg: #3c3489;
+  --cxl-system-bar: #534ab7;
+  --cxl-user-bg: #e1f5ee;
+  --cxl-user-fg: #085041;
+  --cxl-user-bar: #0f6e56;
+  --cxl-text: #15172b;
+  --cxl-text-secondary: #48506b;
+  --cxl-text-hint: #66708d;
+  --cxl-bg: #ffffff;
+  --cxl-bg-muted: #f4f5fb;
+  --cxl-border: rgba(48, 56, 90, 0.16);
+  --cxl-shadow: 0 24px 56px rgba(5, 10, 28, 0.28);
+  --cxl-radius: 16px;
+
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 250, 255, 0.98));
+  border: 1px solid rgba(83, 74, 183, 0.18);
+  border-radius: 28px;
+  box-shadow: var(--cxl-shadow);
+  color: var(--cxl-text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .cxl-root {
+    --cxl-accent: #afa9ec;
+    --cxl-accent-light: #2f2a5f;
+    --cxl-accent-mid: #938be8;
+    --cxl-system-bg: #2f2a5f;
+    --cxl-system-fg: #cecbf6;
+    --cxl-system-bar: #7f77dd;
+    --cxl-user-bg: #0c3024;
+    --cxl-user-fg: #9fe1cb;
+    --cxl-user-bar: #5dcaa5;
+    --cxl-text: #f5f7ff;
+    --cxl-text-secondary: #ccd1ea;
+    --cxl-text-hint: #aab1d2;
+    --cxl-bg: #111426;
+    --cxl-bg-muted: #181d33;
+    --cxl-border: rgba(255, 255, 255, 0.14);
+    --cxl-shadow: 0 28px 64px rgba(0, 0, 0, 0.42);
+    background:
+      linear-gradient(180deg, rgba(17, 20, 38, 0.96), rgba(24, 29, 51, 0.98));
+    border-color: rgba(175, 169, 236, 0.24);
+  }
+}
+
+.cxl-header {
+  margin-bottom: 1.5rem;
+}
+
+.cxl-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--cxl-text);
+}
+
+.cxl-subtitle {
+  font-size: 0.9rem;
+  color: var(--cxl-text-secondary);
+  margin: 0;
+  max-width: 68ch;
+  line-height: 1.55;
+}
+
+.cxl-section {
+  margin-bottom: 1.5rem;
+}
+
+.cxl-label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--cxl-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.cxl-selector {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.cxl-ctx-btn {
+  padding: 0.55rem 0.6rem;
+  font-size: 0.8rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: 1px solid var(--cxl-border);
+  border-radius: var(--cxl-radius);
+  background: var(--cxl-bg);
+  color: var(--cxl-text);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.cxl-ctx-btn:hover {
+  background: var(--cxl-bg-muted);
+}
+
+.cxl-ctx-btn:active {
+  transform: scale(0.97);
+}
+
+.cxl-ctx-btn--active {
+  border-color: var(--cxl-accent);
+  border-width: 2px;
+  background: var(--cxl-accent-light);
+}
+
+.cxl-prompt-box {
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--cxl-radius);
+  border: 1px solid var(--cxl-border);
+  font-size: 0.9rem;
+  color: var(--cxl-text);
+  background: var(--cxl-bg);
+}
+
+.cxl-token-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cxl-token-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cxl-token-pill {
+  min-width: 90px;
+  text-align: right;
+  font-size: 0.82rem;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.cxl-token-pill--system {
+  background: var(--cxl-system-bg);
+  color: var(--cxl-system-fg);
+}
+
+.cxl-token-pill--user {
+  background: var(--cxl-user-bg);
+  color: var(--cxl-user-fg);
+}
+
+.cxl-token-bar-bg {
+  flex: 1;
+  height: 12px;
+  border-radius: 3px;
+  background: var(--cxl-bg-muted);
+  border: 1px solid var(--cxl-border);
+  overflow: hidden;
+}
+
+.cxl-token-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  opacity: 0.75;
+  transition: width 0.4s ease;
+}
+
+.cxl-token-bar-fill--system {
+  background: var(--cxl-system-bar);
+}
+
+.cxl-token-bar-fill--user {
+  background: var(--cxl-user-bar);
+}
+
+.cxl-token-pct {
+  font-size: 0.72rem;
+  color: var(--cxl-text-hint);
+  min-width: 35px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.cxl-response-box {
+  padding: 0.85rem 1rem;
+  border-radius: var(--cxl-radius);
+  border: 1px solid var(--cxl-border);
+  background: var(--cxl-bg-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--cxl-text);
+}
+
+.cxl-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.cxl-metric-card {
+  background: var(--cxl-bg-muted);
+  border: 1px solid var(--cxl-border);
+  border-radius: var(--cxl-radius);
+  padding: 0.85rem 1rem;
+}
+
+.cxl-metric-label {
+  font-size: 0.78rem;
+  color: var(--cxl-text-hint);
+  margin-bottom: 2px;
+}
+
+.cxl-metric-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.cxl-metric-value--small {
+  font-size: 0.95rem;
+}
+
+.cxl-space-svg {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--cxl-bg-muted);
+  border: 1px solid var(--cxl-border);
+  border-radius: 22px;
+}
+
+.cxl-note {
+  padding: 1rem 1.25rem;
+  background: var(--cxl-bg-muted);
+  border: 1px solid var(--cxl-border);
+  border-radius: var(--cxl-radius);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--cxl-text-secondary);
+  border-left: 3px solid var(--cxl-accent-mid);
+}
+
+.cxl-note strong {
+  color: var(--cxl-text);
+}
+
+@media (max-width: 600px) {
+  .cxl-root {
+    padding: 1.25rem 1rem;
+  }
+
+  .cxl-selector {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cxl-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .cxl-token-pill {
+    min-width: 70px;
+    font-size: 0.75rem;
+  }
+}
