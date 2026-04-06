@@ -5,17 +5,23 @@
   --tsl-accent: #534ab7;
   --tsl-accent-light: #eeedfe;
   --tsl-accent-mid: #afa9ec;
-  --tsl-text: #1a1a1a;
-  --tsl-text-secondary: #6b6b6b;
-  --tsl-text-hint: #999;
+  --tsl-text: #15172b;
+  --tsl-text-secondary: #48506b;
+  --tsl-text-hint: #66708d;
   --tsl-bg: #ffffff;
-  --tsl-bg-muted: #f6f5f2;
-  --tsl-border: rgba(0, 0, 0, 0.1);
-  --tsl-radius: 10px;
+  --tsl-bg-muted: #f4f5fb;
+  --tsl-border: rgba(48, 56, 90, 0.16);
+  --tsl-shadow: 0 24px 56px rgba(5, 10, 28, 0.28);
+  --tsl-radius: 16px;
 
   max-width: 780px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 250, 255, 0.98));
+  border: 1px solid rgba(83, 74, 183, 0.18);
+  border-radius: 28px;
+  box-shadow: var(--tsl-shadow);
   color: var(--tsl-text);
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   line-height: 1.6;
@@ -24,14 +30,18 @@
 @media (prefers-color-scheme: dark) {
   .tsl-root {
     --tsl-accent: #afa9ec;
-    --tsl-accent-light: #2a2554;
-    --tsl-accent-mid: #7f77dd;
-    --tsl-text: #e8e8e8;
-    --tsl-text-secondary: #a0a0a0;
-    --tsl-text-hint: #777;
-    --tsl-bg: #1a1a1a;
-    --tsl-bg-muted: #252525;
-    --tsl-border: rgba(255, 255, 255, 0.1);
+    --tsl-accent-light: #2f2a5f;
+    --tsl-accent-mid: #938be8;
+    --tsl-text: #f5f7ff;
+    --tsl-text-secondary: #ccd1ea;
+    --tsl-text-hint: #aab1d2;
+    --tsl-bg: #111426;
+    --tsl-bg-muted: #181d33;
+    --tsl-border: rgba(255, 255, 255, 0.14);
+    --tsl-shadow: 0 28px 64px rgba(0, 0, 0, 0.42);
+    background:
+      linear-gradient(180deg, rgba(17, 20, 38, 0.96), rgba(24, 29, 51, 0.98));
+    border-color: rgba(175, 169, 236, 0.24);
   }
 }
 
@@ -50,6 +60,7 @@
   font-size: 0.9rem;
   color: var(--tsl-text-secondary);
   margin: 0;
+  max-width: 62ch;
 }
 
 .tsl-section {
@@ -89,12 +100,18 @@
   background: var(--tsl-bg);
   color: var(--tsl-text);
   outline: none;
-  transition: border-color 0.2s;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  transition: border-color 0.2s, box-shadow 0.2s;
   box-sizing: border-box;
+}
+
+.tsl-prompt-input::placeholder {
+  color: var(--tsl-text-hint);
 }
 
 .tsl-prompt-input:focus {
   border-color: var(--tsl-accent);
+  box-shadow: 0 0 0 3px rgba(83, 74, 183, 0.14);
 }
 
 .tsl-context-badge-row {
@@ -136,10 +153,24 @@
   flex: 1;
   appearance: none;
   -webkit-appearance: none;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--tsl-border);
+  height: 8px;
+  border-radius: 999px;
+  border: 1px solid var(--tsl-border);
+  background: linear-gradient(90deg, rgba(83, 74, 183, 0.22), rgba(83, 74, 183, 0.08));
   outline: none;
+}
+
+.tsl-slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.tsl-slider::-moz-range-track {
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
 }
 
 .tsl-slider::-webkit-slider-thumb {
@@ -151,7 +182,8 @@
   background: var(--tsl-accent);
   cursor: pointer;
   border: 2px solid var(--tsl-bg);
-  box-shadow: 0 0 0 1px var(--tsl-accent);
+  box-shadow: 0 0 0 2px var(--tsl-accent), 0 4px 12px rgba(0, 0, 0, 0.18);
+  margin-top: -6px;
 }
 
 .tsl-slider::-moz-range-thumb {
@@ -161,7 +193,7 @@
   background: var(--tsl-accent);
   cursor: pointer;
   border: 2px solid var(--tsl-bg);
-  box-shadow: 0 0 0 1px var(--tsl-accent);
+  box-shadow: 0 0 0 2px var(--tsl-accent), 0 4px 12px rgba(0, 0, 0, 0.18);
 }
 
 .tsl-slider-value {
@@ -170,6 +202,7 @@
   min-width: 40px;
   text-align: right;
   font-variant-numeric: tabular-nums;
+  color: var(--tsl-text);
 }
 
 .tsl-presets {
@@ -189,7 +222,7 @@
   background: var(--tsl-bg);
   color: var(--tsl-text);
   cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 
 .tsl-preset-btn:hover {
@@ -212,6 +245,7 @@
   background: var(--tsl-bg-muted);
   border-radius: var(--tsl-radius);
   padding: 0.85rem 1rem;
+  border: 1px solid var(--tsl-border);
 }
 
 .tsl-metric-label {
@@ -235,6 +269,10 @@
   width: 100%;
   height: 300px;
   margin-bottom: 1.75rem;
+  padding: 0.9rem 0.9rem 0.4rem;
+  background: var(--tsl-bg-muted);
+  border: 1px solid var(--tsl-border);
+  border-radius: 22px;
 }
 
 .tsl-chart-canvas {
@@ -282,6 +320,7 @@
   height: 14px;
   border-radius: 3px;
   background: var(--tsl-bg-muted);
+  border: 1px solid var(--tsl-border);
   overflow: hidden;
 }
 
@@ -318,7 +357,8 @@
 .tsl-note code {
   font-family: "SF Mono", "Fira Code", "Consolas", monospace;
   font-size: 0.78rem;
-  background: var(--tsl-border);
+  background: rgba(83, 74, 183, 0.14);
+  color: var(--tsl-text);
   padding: 1px 5px;
   border-radius: 4px;
 }
